@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="impares">ingresa un numero</label>
+    <input type="number" id="numero"> 
+<button onclick="calcular()">Calcular</button> 
+
+<p id="impares"></p> 
+<p id="suma"></p> 
+    <script>
+ function calcular() { 
+  var num = document.getElementById("numero").value; 
+  var impares = ""; 
+  var sumaPares = 0; 
+
+  for (var i = 1; i <= num; i++) { 
+    if (i%2 !== 0) { 
+      impares += i + ""; 
+    } else { 
+      sumaPares += i; 
+    } 
+  } 
+
+  document.getElementById("impares").innerHTML = "Números impares: " + impares; 
+  document.getElementById("suma").innerHTML = "Suma de números pares: " + sumaPares; 
+} 
+    </script>
+
+</body>
+</html>

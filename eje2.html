@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+<button onclick="calcularCRUD()">CLICK PARA QUE PUEDAS VER EL MENU DE OPCIONES</button> 
+    <script>
+    function calcularCRUD(){
+            const Nombres=[];
+            let op=0;
+            do{
+                console.log("MENU DE OPCIONES")
+                console.log("1ra op.- CREAR");
+                console.log("2da op.- MOSTRAR");
+                console.log("3ra op.- ACTUALIZAR");
+                console.log("4ta op.- ELIMINAR");
+                op=prompt("Eliga una opcion: ");
+                if (op==1) {
+                    let lim=prompt("cuantos nombres desea ver: ");
+                    for (let i=0; i<lim; i++) {
+                        let nom=prompt("Nombre"+(i+1));
+                        Nombres.push(nom);
+                    }
+                }
+                if (op==2) {
+                    for (let i=0; i<Nombres.length; i++) {
+                        console.log(Nombres[i]);
+                    }
+                }
+                if (op==3) {
+                    let up=prompt("elija la posicion que desea actualizar");
+                    ari=Nombres[up];
+                    console.log(ari);
+                    Nombres.pop();
+                    let nu=prompt("ingrese nuevo nombre");
+                    Nombres.push(nu);
+                }
+                if (op==4) {
+                    Nombres.pop();
+                     
+            
+                }
+                
+            } while (op!=4);
+        }
+    </script>
+</body>
+</html>
